@@ -41,6 +41,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    
 ]
 
 
@@ -53,10 +54,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'product',
-    'apiRest',
     'rest_framework',
     'corsheaders',
+    'product',
+    'apiRest',
+    
 
 
 ]
@@ -65,11 +67,13 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    
+   
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -104,7 +108,9 @@ DATABASES = {
         'PASSWORD': env('DB_PASSWORD'),
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
+
     }
+
 }
 
 
@@ -161,6 +167,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = [
+    'https://naima60.github.io',
     'http://localhost:3000',  # Remplacez par l'URL de votre application React
     'http://localhost:3001',
 ]
