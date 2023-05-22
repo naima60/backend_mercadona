@@ -83,9 +83,9 @@ my_env/
 - `requirements.txt`: Fichier de dépendances Python.
 
 # lien application React (Frontend)
-  ## application déployée : 
-  ## application à installer : 
-
+ - Application déployée : copier/coller ce lien danns votre navigateur : https://naima60.github.io/mercadona_fontend/
+ - Application complète : https://github.com/naima60/mercadona_fontend.git
+  
 # Auteur
 Naima Boutrah
 
