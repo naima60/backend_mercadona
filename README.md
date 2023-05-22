@@ -23,7 +23,7 @@ dans une autre application React pour la partie frontend dont vous trouverez le 
 my_env/
 
 # Configuration
-  ## base de données et variable d'environnement
+  ## Base de données et variables d'environnement
   A. Les personnes qui ont un accès total à mon application doivent juste copier les variables d'environnement que je leur ai déjà communiqué dans un 
   fichier .env qu'ils doivent créer au préalable.
 
