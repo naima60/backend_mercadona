@@ -10,7 +10,7 @@ class Categorie(models.Model):
     libelle = models.CharField(max_length=250)
     active = models.BooleanField(default=True)
 
-    # la fonction __str__ permet d'afficher le nom de l'objet créé dans admin Django
+    
     def __str__(self):
         return self.libelle
 
@@ -19,6 +19,7 @@ class Promotion(models.Model):
     date_debut = models.DateField()
     date_fin = models.DateField()
     taux = models.FloatField(null=True)
+    
 
 class Produit(models.Model):
     libelle = models.CharField(max_length=250)

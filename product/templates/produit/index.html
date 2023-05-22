@@ -3,46 +3,44 @@
 
 
 {% block head %}
-    {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static 'produit/style.css' %}">
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'produit/style.css' %}">
 
 {% endblock head %}
 
 {% block content %}
-    {# parcourir la liste des produits  #}
-    <div class="container">
-        <div class="row">
-    {% for product in products %}
-
-        <div class="card col-md-2 " >
-            <div class="card-img" >
+{# parcourir la liste des produits #}
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-6">
+        {% for product in products %}
+        <div class="card-container col-md-2 ">
+            <div class="card">
                 {% if product.image %}
-                    <img src="{{ product.image.url}}" class="card-img-top" alt="{{ product.libelle }}">
-                {% endif %}
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{ product.libelle }}</h5>
-                <p class="card-text">{{ product.description }}</p>
-            </div>
-
-
-                   {% if product.remise %}
-                       <p class="card-price text-red"> {{ product.remise | floatformat:2 }}  € </p>
-                   {% else %}
-                       <p class="card-price" > {{ product.prix }} €</p>
+                <img src="{{ product.image.url}}" class="card-img-top" alt="{{ product.libelle }}">
                 {% endif %}
 
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.libelle }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+
+                    {% if product.remise %}
+                    <p class="card-price text-red"> {{ product.remise | floatformat:2 }}€</p>
+                    {% else %}
+                    <p class="card-price"> {{ product.prix | floatformat:2 }}€</p>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
-    </div>
+</div>
 
 
-    <div class="pagination">
+<div class="pagination">
     <span class="step-links">
         {% if products.has_previous %}
-            <a href="?page=1">&laquo; First</a>
-            <a href="?page={{ products.previous_page_number }}">previous</a>
+        <a href="?page=1">&laquo; Suivant</a>
+        <a href="?page={{ products.previous_page_number }}">Précédent</a>
         {% endif %}
 
         <span class="current-page">
@@ -50,8 +48,8 @@
         </span>
 
         {% if products.has_next %}
-            <a href="?page={{ products.next_page_number }}">next</a>
-            <a href="?page={{ products.paginator.num_pages }}">Last &raquo;</a>
+        <a href="?page={{ products.next_page_number }}">Suivant</a>
+        <a href="?page={{ products.paginator.num_pages }}">Précédent&raquo;</a>
         {% endif %}
     </span>
 </div>

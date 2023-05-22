@@ -8,44 +8,47 @@ body{
 
 }
 
+
 .card{
-    width: 290px;
-    height: 340px;
-    margin: 2px;
+    width: 195px;
+    height: 290px;
     border-radius: 10px;
-
-}
-
+    margin: 5px;
+    
+       
+  }
 
 .card-img{
     background-color: #f7f7f7;
 }
+
 .card-img-top{
     width: 150px;
     height: 180px;
-
-}
+  }
 
 .card-title{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .card-text{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 }
 
 .card-price{
-    position: absolute;
+position: absolute;
   bottom: 0;
   right: 0;
   margin: 0;
   padding: 0 10px 10px 0;
   font-size: 18px;
-    font-weight: 600;
+font-weight: 600;
 
 }
+
+
 
 .text-red{
     color: red;
