@@ -1,11 +1,11 @@
 # Ignore les fichiers de l'environnement virtuel
-my_env/
+*my_env/
 
 # Ignore les fichiers de migration
 *.pyc
 __pycache__/
 db.sqlite3
 
-.idea/
-.env
+*.idea/
+*.env
 
